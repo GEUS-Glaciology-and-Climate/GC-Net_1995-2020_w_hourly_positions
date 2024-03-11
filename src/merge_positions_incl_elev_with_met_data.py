@@ -66,7 +66,7 @@ for site, ID,nickname in zip(meta['Station Name'],meta.Station,nicknames):
     # if site=='Swiss Camp':
     # if site=='South Dome':
         # print(ID)
-    if ID>=17:
+    if ID>=24:
     # if ID>8:
     # if ID==9:
         # df=pd.read_csv('./output/swc_air_t_1990-2021.csv')
@@ -92,7 +92,7 @@ for site, ID,nickname in zip(meta['Station Name'],meta.Station,nicknames):
             df['time'] = pd.to_datetime(df.timestamp)
             df = df.set_index('time')
     
-            # print(df.columns)
+            print(df.columns)
             df[df==999]=np.nan
             
             df['year'] = df.index.year
@@ -109,7 +109,10 @@ for site, ID,nickname in zip(meta['Station Name'],meta.Station,nicknames):
 
             if not path.exists(fn):
                 df_pos=df.copy()
-                df_pos=df[['timestamp','TS1']]
+                if site!='EastGRIP':
+                    df_pos=df[['timestamp','TS1']]
+                else:
+                    df_pos=df[['timestamp','SZA']]
                 meta0.columns
                 v=np.where(ID==meta0.ID)
                 df_pos['lat']=np.nan
