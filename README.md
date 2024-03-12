@@ -1,7 +1,7 @@
 # GC-Net_1995-2020_w_hourly_positions
 'historical' GC-Net data 1995 to 2020 with (in certain cases*) variable elevation and/or lat lon
 
-![map GCN transparent](https://github.com/GEUS-Glaciology-and-Climate/GC-Net_1995-2020_w_hourly_positions/assets/32133350/525e8439-dce2-4c49-bc6a-8700a3819e27)
+![map GC-Net sm](https://github.com/GEUS-Glaciology-and-Climate/GC-Net_1995-2020_w_hourly_positions/assets/32133350/3493e389-2868-44f9-894f-fd890c389492)
 
 since-1990s Greenland automatic weather station (AWS) data for reanalysis assimilation.
 
