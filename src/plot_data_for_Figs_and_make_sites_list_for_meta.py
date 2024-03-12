@@ -21,19 +21,24 @@ os.chdir(base_path)
 
 files=glob('./data/*')
 
-
 # print(files)
 
 sites=[]
 n_hours=[]
 
-varnames=['longitude, deg', 'latitude, deg N', 'elevation above mean sea-level, m',
-          'air-T ~1.5 m TA1, C', 'air-T ~3.7 m TA2, C', 'air-T ~1.5 m TA3, C', 'air-T ~3.7 m TA4, C',
+varnames=['longitude, °', 'latitude, ° N', 'elevation above mean sea-level, m',
+          'air-T ~1.5 m TA1, °C', 'air-T ~3.7 m TA2, °C', 'air-T ~1.5 m TA3, C', 'air-T ~3.7 m TA4, C',
           'rel.-humidity RH1 ~1.5 m, %', 'rel.-humidity RH2 ~3.7 m, %', 'wind-speed 1 VW1. m/s',
        'wind-speed 2 VW2, m/s', 'wind direction 1 DW1, deg true', 'wind direction 2 DW2.deg true', 'surface air pressure P, hPA']
+
+varnames=['longitude, °', 'latitude, ° N', 'elevation above mean sea-level, m',
+          'air-T ~1.5 m, °C', 'air-T ~3.7 m, °C', 'air-T ~1.5 m, °C', 'air-T ~3.7 m, °C',
+          'rel.-humidity ~1.5 m, %', 'rel.-humidity ~3.7 m, %', 'wind-speed 1, m/s',
+       'wind-speed 2, m/s', 'wind direction 1, deg true', 'wind direction 2, deg true', 'surface air pressure P, hPA']
+
 for st,file in enumerate(files):
-    # if st==0:
-    if st>=0:
+    if st==0:
+    # if st>=0:
         fn=file.split(os.sep)[-1]
         df=pd.read_csv(file)
         df["time"] = pd.to_datetime(df['date'])
@@ -52,8 +57,8 @@ for st,file in enumerate(files):
             N=len(df.columns[1:])
             fig, ax = plt.subplots(N-1,figsize=(9,20))
             for vv,var in enumerate(df.columns[1:-1]):
-                # print(var)
-                
+                # print(var,',',varnames[vv])
+                # #%%
                 ax[vv].plot(df[var],label=var)
                 ax[vv].legend()
                 if vv==0:

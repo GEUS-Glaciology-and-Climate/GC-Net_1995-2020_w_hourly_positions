@@ -1,0 +1,15 @@
+variable name,description,units
+lon,longitude,°
+lat,latitude,° N
+elev,elevation above mean sea-level,m
+TA1,air temperature from thermocouple ~1.5 m above ground,°C
+TA2,air temperature from thermocouple ~3.7 m above ground,°C
+TA3,air temperature from thermister minimum -40°C ~1.5 m above ground,°C
+TA4,air temperature from thermister minimum -40°C ~3.7 m above ground,°C
+RH1,relative humidity ~1.5 m,%
+RH2,relative humidity ~3.7 m,%
+VW1,wind speed 1,m/s
+VW2,wind speed 2,m/s
+DW1,wind direction 1,° true
+DW2,wind direction 2,° true
+P,surface air pressure P,hPA
