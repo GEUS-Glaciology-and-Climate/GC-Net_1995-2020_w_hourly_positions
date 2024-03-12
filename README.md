@@ -16,4 +16,4 @@ While the change in the lat, lon, elevation is not large from day to day, the po
 Code here merges a) horizontally-interpolated positions from certain AWS with b) time-variable elevations estimated from a variety of data sources and c) AWS meteorological data useful for e.g. atmospheric reanalysis data assimilation
 
 building on data, sourced from [QC'd hourly AWS data](https://github.com/GEUS-Glaciology-and-Climate/GC-Net-level-1-data-processing/tree/main/L1/hourly) and [interpolated horizontal positions](https://github.com/GEUS-Glaciology-and-Climate/GCNet_positions/tree/main/output) using
-[this code](
+[this code](https://github.com/GEUS-Glaciology-and-Climate/GCNet_positions/blob/main/analyze_AWS_elevs_including_ATM_v4.py)
