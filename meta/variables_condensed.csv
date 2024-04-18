@@ -2,14 +2,14 @@ variable name,description,units
 lon,longitude,°
 lat,latitude,° N
 elev,elevation above mean sea-level,m
-T1,air temperature from thermocouple ~1.5 m above ground,°C
-T2,air temperature from thermocouple ~3.7 m above ground,°C
-RH1,relative humidity ~1.5 m,%
-RH2,relative humidity ~3.7 m,%
+T1,air temperature 1,°C
+T2,air temperature 2,°C
+RH1,relative humidity 1,%
+RH2,relative humidity 2,%
 VW1,wind speed 1,m/s
 VW2,wind speed 2,m/s
 DW1,wind direction 1,° true
 DW2,wind direction 2,° true
 P,surface air pressure P,hPA
-HS1,height of instrument 1 above ground,m
-HS2,height of instrument 2 above ground,m
+HW1,height of instrument 1 above ground,m
+HW2,height of instrument 2 above ground,m
