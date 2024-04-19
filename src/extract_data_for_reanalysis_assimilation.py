@@ -13,6 +13,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from os import path
 import nead
+from datetime import date, timedelta
 
 
 # -------------------------------- chdir
@@ -216,10 +217,10 @@ for st,(site, ID )in enumerate(zip(site_list.Name,site_list.ID)):
                         if vv==0:
                             ax[vv].set_title(site+' '+str(len(dfx))+' hourly averages, year '+str(yy))
                         ax[vv].set_ylabel(varnames[vv])
+                        ax[vv].set_xlim([date(yy, 1, 1),date(yy, 12, 31) ])
                         # ax[vv].set_ylabel(varnames[vv].replace(' ','\n'))
                     # # ax.set_xlim(t0,t1+timedelta(hours=6))
                     plt.setp(ax[vv].xaxis.get_majorticklabels(), rotation=90,ha='center',fontsize=fs)
-                    # # ax.set_xlim()
                     # ax[cc].xaxis.set_major_formatter(mdates.DateFormatter('%b %d'))
                     plt.subplots_adjust(wspace=0, hspace=0)
                     ly='p'
